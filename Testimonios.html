@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonios</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        :root {
+            --color-principal: #D8C598;
+            --color-secundario: #B08A28;
+            --color-terciario: #d8c598;
+            --color-neutro: #919191;
+            --color-texto: #0E231D;
+            --color-fondo: #F5F5F5;
+            --color-blanco: #FFFFFF;
+        }
+
+        #sidebar {
+            height: 100vh;
+            width: 250px;
+            background-color: var(--color-principal);
+            color: var(--color-texto);
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #sidebar h3 {
+            color: var(--color-secundario);
+        }
+
+        #sidebar ul {
+            padding-left: 0;
+            list-style-type: none;
+        }
+
+        #sidebar li {
+            margin-bottom: 15px;
+        }
+
+        #sidebar a {
+            color: var(--color-texto);
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #sidebar a:hover {
+            background-color: var(--color-secundario);
+            color: var(--color-blanco);
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .testimonial {
+            margin-bottom: 20px;
+        }
+
+        .testimonial img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar" class="sidebar">
+        <h3>Barra Lateral</h3>
+        <ul class="list-unstyled">
+            <li><a href="">Inicio</a></li>
+            <li><a href="Home.html">Nosotros</a></li>
+            <li><a href="Servicios.html">Servicios</a></li>
+            <li><a href="Producto.html">Productos</a></li>
+            <li><a href="Noticias.html">Noticias</a></li>
+            <li><a href="Contacto y soporte.html">Contacto y soporte</a></li>
+            <li><a href="FAQs.html">FAQs</a></li>
+            <li><a href="TYC.html">TyC</a></li>
+            <li><a href="Carreras.html">Carreras</a></li>
+            <li><a href="Portafolio.html">Portafolio</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="container">
+        	<img src="https://i.ibb.co/hgt1pn2/Logo.jpg"style="width:100px;height:100px;" alt="logo de la empresa"/>
+            <h1>Testimonios </h1>
+            
+            <!-- Opiniones de Clientes Satisfechos -->
+            <div class="section">
+                <h2>Opiniones de Clientes Satisfechos</h2>
+                <div class="testimonial">
+                    <p>"El servicio fue excepcional. La calidad y la atención al detalle fueron sobresalientes."</p>
+                    <p><strong>- Omar Meza</strong></p>
+                </div>
+                <div class="testimonial">
+                    <p>"Excelente equipo de profesionales. Superaron nuestras expectativas en todos los aspectos."</p>
+                    <p><strong>- Yadira Cruz</strong></p>
+                </div>
+            </div>
+
+            <!-- Historias de Éxito -->
+            <div class="section">
+                <h2>Historias de Éxito</h2>
+                <div class="testimonial">
+                    <h3>Historia de Éxito Mentortracker</h3>
+                    <p>"Implementamos una solución personalizada que transformó nuestro negocio."</p>
+                  
+                </div>
+            
+                <div class="testimonial">
+                    <p>"Nuestro proyecto actualmente pasa por una etapa de desarrollo pero hemos avanzado mucho gracias al apoyo y la experiencia del equipo."</p>
+                    <p><strong>- Juan Camilo Meza</strong></p>
+                </div>
+            </div>
+
+            <!-- Imágenes de Proyectos Realizados -->
+            <div class="section">
+                <h2>Imágenes de Proyectos Realizados</h2>
+                <div class="testimonial">
+                    <img src="https://previews.dropbox.com/p/thumb/ACWUrrv1cyPUDL49TZfkfN5FG33LePTZx9YPeuac2Ar7-ytz9TlulMUBJuZgwWZIRiAFlBPILeuubNx7llWWaNMHWV-BjlUtbfFFzS9f2eYmfXAiL8_JUavyS-i77s8HVAq-r2YSy5w4q5gb86J6VIW9AzvnXlN1tXKeGM_N00L-EKhuGhk3riVzsm-hlrVzOBWJ5djcUo5IThx7rRd8Twc6TEoAqLTsmxef8gE6vpdE5CgegU_2fPSFtBk3tjngd9S3vgrwvYHRb-eg0LJIE_jR1OuHPUr3luCOGYkO3f-4xAq29wcBmWFHVr-7HPDvwjp7-Yt2RARun--27mHIZII7/p.png?is_prewarmed=true" style="width:150px;height:150px;" alt="Proyecto 1">
+                </div>
+                <div class="testimonial">
+                    <img src="https://previews.dropbox.com/p/thumb/ACX4os8E6gj2-xNVgfHX6BkwcSfYP5OaIWO16drf96r7jLLQMHPJdHUYiKW5R2b2ed67v9t58zwfayu4iZpzVi8dgHnDETndXhTQtE1x04IiTy_jnEaIKFzuV9k0XoJz9btCqZjhubNIAeaz7G5KCnDwAyBnd37DVaCaiMzVgY0TeMAWwSdn88I23xRK2IATmixfQ2Uir8r9YqfJHyHYy6V5mGEwXDg9VwWC6DyTI4VyvuRB-ZgFjpyColIF9pKHYphSTGo0usfvRAB_m7TZ_zQ5s62Fcmm_RJiiOc0-tkqsmAgq0mWK50oNyYOW0evno1MCw2XK5h1iumuIBGPRpPWs/p.png?is_prewarmed=true" style="width:150px;height:150px;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

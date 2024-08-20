@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <!-- Incluir Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-qNpXiK3+Yw5nE0tyDzk+9/c+iFSzJZx8i8obZBkZTywm5x1ERcSf+L6f6zkyo8DG" crossorigin="anonymous">
+
+    <style>
+        /* Variables de colores */
+        :root {
+            --color-principal: #D8C598;
+            --color-secundario: #B08A28;
+            --color-terciario: #41665B;
+            --color-neutro: #919191;
+            --color-texto: #0E231D;
+            --color-fondo: #F5F5F5;
+            --color-blanco: #FFFFFF;
+        }
+
+        /* Estilo del body */
+        body {
+            font-family: Arial, sans-serif;
+            color: var(--color-texto);
+            background-color: var(--color-fondo);
+        }
+
+        /* Estilo del header */
+        header {
+            background-color: var(--color-principal);
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            color: var(--color-texto);
+            margin: 0;
+        }
+
+        /* Estilo del logo en el encabezado */
+        .header-logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            height: 200px;
+            width: 200px;
+        }
+
+        /* Estilo de la barra lateral */
+        .sidebar {
+            background-color: var(--color-secundario);
+            color: var(--color-texto);
+            padding: 20px;
+            border-radius: 5px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 270px; /* Ajusta el ancho de la barra lateral */
+            transform: translateX(0); /* Mostrar el menú por defecto */
+            transition: transform 0.3s ease-in-out;
+            overflow: hidden;
+            z-index: 1000;
+        }
+
+        .sidebar.inactive {
+            transform: translateX(-270px); /* Ocultar el menú cuando esté inactivo */
+        }
+
+        /* Estilo del botón de alternancia */
+        #toggleSidebarBtn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1001;
+            background-color: var(--color-secundario);
+            color: var(--color-texto);
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        #toggleSidebarBtn:hover {
+            background-color: #e0a800;
+        }
+
+        /* Estilo del contenido principal */
+        .content {
+            flex: 3;
+            background-color: var(--color-terciario);
+            padding: 20px;
+            color: var(--color-texto);
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: margin-left 0.3s ease;
+            margin-left: 270px; /* Ajustar el margen para el contenido principal */
+        }
+
+        /* Estilo del pie de página */
+        footer {
+            background-color: var(--color-secundario);
+            color: var(--color-texto);
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        /* Diseño responsivo */
+        @media (min-width: 768px) {
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 250px;
+                transform: translateX(0);
+                z-index: 1000;
+            }
+
+            .content {
+                margin-left: 250px;
+                padding: 20px;
+                background-color: var(--color-fondo);
+             color: var(--color-texto);
+            }
+
+            .container {
+                width: auto;
+            }
+        }
+        #sidebar {
+            height: 100vh;
+            width: 200px;
+            background-color: var(--color-principal);
+            color: var(--color-texto);
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil */
+        }
+
+        #sidebar h3 {
+            color: var(--color-secundario);
+        }
+
+        #sidebar ul {
+            padding-left: 0;
+            list-style-type: none;
+        }
+
+        #sidebar li {
+            margin-bottom: 15px; /* Aumenta el espacio entre los elementos */
+        }
+
+        #sidebar a {
+            color: var(--color-texto);
+            text-decoration: none;
+            display: block; /* Hace que el enlace ocupe todo el ancho disponible */
+            padding: 10px; /* Añade espaciado interno para mejorar el área de clic */
+            border-radius: 4px; /* Redondea las esquinas del enlace */
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #sidebar a:hover {
+            background-color: var(--color-secundario); /* Cambia el fondo al pasar el mouse */
+            color: var(--color-blanco); /* Cambia el color del texto */
+            transform: scale(1.1); /* Aumenta el tamaño del enlace */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra más pronunciada */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://i.ibb.co/hgt1pn2/Logo.jpg"style="width:200px;height:150px;" alt="Logo" class="header-logo">
+        <h1>Bienvenido a Nuestra Página Principal</h1>
+    </header>
+
+    <div class="d-flex">
+        <!-- Botón para mostrar/ocultar la barra lateral en dispositivos móviles -->
+        <button id="toggleSidebarBtn" type="button" class="btn">
+            Cerrar Menú
+        </button>
+
+        <!-- Barra lateral plegable -->
+        <div id="sidebar" class="sidebar">
+            <li></li>
+            <h4>Barra Lateral</h4>
+            <ul class="list-unstyled">
+                <li><a href="Home.html">Inicio</a></li>
+                <li><a href="Nosotros.html">Nosotros</a></li>
+                <li><a href="Servicios.html">Servicios</a></li>
+                <li><a href="Producto.html">Productos</a></li>
+                <li><a href="Noticias.html">Noticias</a></li>
+                <li><a href="Contacto y soporte.html">Contacto y Soporte</a></li>
+                <li><a href="FAQs.html">FAQs</a></li>
+                <li><a href="TYC.html">TyC</a></li>
+                <li><a href="Carreras.html">Carreras</a></li>
+                <li><a href="Portafolio.html">Portafolio</a></li>
+            </ul>
+        </div>
+
+        <!-- Contenido principal -->
+        <div class="container content">
+            <section class="mt-4">
+                <h2>Mensaje de Bienvenida</h2>
+                <p>La gestión administrativa en las instituciones educativas se ha convertido en una compleja red de desafíos que a menudo resulta en ineficiencias y frustraciones que impactan negativamente tanto a los docentes como a los estudiantes, así como al personal administrativo. Los usuarios puedan aprovechar al máximo nuestras herramientas para la mejora.</p>
+            </section>
+
+            <section class="mt-4">
+                <h2>Reseña de la Empresa</h2>
+                <p><strong>Misión:</strong> Nuestra misión es empoderar a las instituciones educativas a nivel global, ofreciendo soluciones de gestión administrativa de vanguardia, como MentorTracker. Estamos comprometidos en simplificar la administración y potenciar la enseñanza, permitiendo a docentes y personal administrativo centrarse en la educación y el aprendizaje.</p>
+                <p><strong>Visión:</strong> Visualizamos que MentorTracker en 2028 sea reconocido como el estándar de excelencia en administración educativa, donde nuestra plataforma se convierta en una herramienta indispensable en instituciones de todo el mundo.</p>
+            </section>
+
+            <section class="mt-4">
+                <h2>Nuestro Producto Destacado</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            
+                            <div class="card-body">
+                                <p class="card-text">Mentortracker es una herramienta integral que facilita la gestión eficiente de las actividades académicas y administrativas, mejorando la comunicación y el acceso a recursos esenciales para el funcionamiento de una institución educativa.
+
+
+
+
+
+
+.</p>
+                                <a href="#" class="btn btn-primary">Más Información</a>
+                            </div>
+                        </div>
+                    </div>
+
+            </section>
+
+            <section class="mt-4">
+                <h2>Testimonios de Clientes</h2>
+                <div id="testimoniosCarousel" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <blockquote class="blockquote">
+                                <p>"Gran servicio y soporte. Altamente recomendado."</p>
+                                <footer class="blockquote-footer">Alejandro Torres</footer>
+                            </blockquote>
+                        </div>
+                        <div class="carousel-item">
+                            <blockquote class="blockquote">
+                                <p>"Una experiencia excelente. Muy satisfecho con los resultados."</p>
+                                <footer class="blockquote-footer">Omar Meza</footer>
+                            </blockquote>
+                        </div>
+                        <div class="carousel-item">
+                            <blockquote class="blockquote">
+                                <p>"Recomiendo altamente sus servicios. Profesionales y eficientes."</p>
+                                <footer class="blockquote-footer">Yadira Cruz</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#testimoniosCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#testimoniosCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+            </section>
+
+            <section class="mt-4">
+                <h2>Contacto</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="name" placeholder="Tu nombre">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo__   </label>
+                        <input type="email" class="form-control" id="email" placeholder="Tu correo electrónico">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="message" rows="3" placeholder="Tu mensaje"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Nuestra Empresa. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Incluir Bootstrap JS y Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9vYYan6g2W8C6fJt8RE5k45rGx0R9zI4v8l6/k6/7f5o1ONR5hZ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-h6j4F6dGZ6k20YkPXfE16B54LZ12sCIOS3ErxPNTxj5cz1Sph9RmKnTGR5Xjl4nB" crossorigin="anonymous"></script>
+    <script>
+document.getElementById('toggleSidebarBtn').addEventListener('click', function() {
+    var sidebar = document.getElementById('sidebar');
+    var content = document.querySelector('.content');
+
+    if (sidebar.classList.contains('inactive')) {
+        sidebar.classList.remove('inactive');
+        content.style.marginLeft = '270px'; // Ajusta el margen cuando la barra lateral está activa
+        this.textContent = 'Cerrar Menú'; // Cambia el texto del botón
+    } else {
+        sidebar.classList.add('inactive');
+        content.style.marginLeft = '0'; // Restablece el margen cuando la barra lateral está inactiva
+        this.textContent = 'Abrir Menú'; // Cambia el texto del botón
+    }
+});
+    </script>
+</body>
+</html>

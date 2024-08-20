@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J and J Corporation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-principal: #D8C598;
+            --color-secundario: #B08A28;
+            --color-terciario: #d8c598;
+            --color-neutro: #919191;
+            --color-texto: #0E231D;
+            --color-fondo: #F5F5F5;
+            --color-blanco: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        #sidebar {
+            height: 100vh;
+            width: 200px;
+            background-color: var(--color-principal);
+            color: var(--color-texto);
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #sidebar h3 {
+            color: var(--color-secundario);
+        }
+
+        #sidebar ul {
+            padding-left: 0;
+            list-style-type: none;
+        }
+
+        #sidebar li {
+            margin-bottom: 15px;
+        }
+
+        #sidebar a {
+            color: var(--color-texto);
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #sidebar a:hover {
+            background-color: var(--color-secundario);
+            color: var(--color-blanco);
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+        }
+
+        .job-listing, .job-description, .benefits, .application-process, .culture {
+            margin-bottom: 40px;
+        }
+
+        .job-listing h2, .job-description h2, .benefits h2, .application-process h2, .culture h2 {
+            color: var(--color-secundario);
+        }
+
+        .job-listing ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .job-listing li {
+            margin-bottom: 10px;
+        }
+
+        .job-listing a {
+            color: var(--color-secundario);
+            text-decoration: none;
+        }
+
+        .job-listing a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar" class="sidebar">
+        <h4>Barra Lateral</h4>
+        <ul class="list-unstyled">
+            <li><a href="Home.html">Inicio</a></li>
+            <li><a href="Nosotros.html">Nosotros</a></li>
+            <li><a href="Servicios.html">Servicios</a></li>
+            <li><a href="Producto.html">Productos</a></li>
+            <li><a href="Noticias.html">Noticias</a></li>
+            <li><a href="Contacto y soporte.html">Contacto y soporte</a></li>
+            <li><a href="FAQs.html">FAQs</a></li>
+            <li><a href="TYC.html">TyC</a></li>
+            <li><a href="Carreras.html">Carreras</a></li>
+            <li><a href="Portafolio.html">Portafolio</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <img src="https://i.ibb.co/hgt1pn2/Logo.jpg"style="width:100px;height:100px;" alt="logo de la empresa"/>
+        <div class="job-listing">
+            <h2>Ofertas de Empleo Actuales</h2>
+            <ul>
+                <li><a href="#">Desarrollador Frontend</a></li>
+                <li><a href="#">Analista de Datos</a></li>
+                <li><a href="#">Gerente de Proyecto</a></li>
+            </ul>
+        </div>
+
+        <div class="job-description">
+            <h2>Descripción de Puestos</h2>
+            <p>J and J Corporation es una empresa innovadora y especializada en la creación de páginas web personalizadas para docentes y personal administrativo..</p>
+        </div>
+
+        <div class="benefits">
+            <h2>Beneficios de Trabajar en la Empresa</h2>
+            <p>Implementación de funcionalidades específicas para docentes y administradores. Experiencia en HTML, CSS y JavaScript. Conocimientos en PHP y bases de datos SQL. Y la capacidad para trabajar en equipo y cumplir con plazos ajustados.</p>
+        </div>
+
+        <div class="application-process">
+            <h2>Proceso de la pagina </h2>
+            <p>Visita nuestra página web para conocer las posiciones abiertas. El correo de la empresa es gradesfile72@gmail.com </p>
+        </div>
+
+        <div class="culture">
+            <h2>Cultura Corporativa y Testimonios de Empleados</h2>
+            <p>Nuestra cultura corporativa se basa en la innovación, la colaboración y el desarrollo profesional. Lee lo que nuestros empleados tienen que decir sobre trabajar con nosotros.</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias de Tecnología</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        :root {
+            --color-principal: #D8C598;
+            --color-secundario: #B08A28;
+            --color-terciario: #d8c598;
+            --color-neutro: #919191;
+            --color-texto: #0E231D;
+            --color-fondo: #F5F5F5;
+            --color-blanco: #FFFFFF;
+        }
+
+        #sidebar {
+            height: 100vh;
+            width: 200px;
+            background-color: var(--color-principal);
+            color: var(--color-texto);
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #sidebar img {
+            width: 100px; /* Ajusta el tamaño del logo según sea necesario */
+            height: auto;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        #sidebar h3 {
+            color: var(--color-secundario);
+        }
+
+        #sidebar ul {
+            padding-left: 0;
+            list-style-type: none;
+        }
+
+        #sidebar li {
+            margin-bottom: 15px;
+        }
+
+        #sidebar a {
+            color: var(--color-texto);
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #sidebar a:hover {
+            background-color: var(--color-secundario);
+            color: var(--color-blanco);
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+        }
+
+        .news-article {
+            border-bottom: 1px solid var(--color-neutro);
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+
+        .news-article h2 {
+            color: var(--color-secundario);
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar" class="sidebar">
+ 
+        <h4>Barra Lateral</h4>
+        <ul class="list-unstyled">
+            <li><a href="Home.html">Inicio</a></li>
+            <li><a href="Nosotros.html">Nosotros</a></li>
+            <li><a href="Servicios.html">Servicios</a></li>
+            <li><a href="Producto.html">Productos</a></li>
+            <li><a href="Noticias.html">Noticias</a></li>
+            <li><a href="Contacto y soporte.html">Contacto y soporte</a></li>
+            <li><a href="FAQs.html">FAQs</a></li>
+            <li><a href="TYC.html">TyC</a></li>
+            <li><a href="Carreras.html">Carreras</a></li>
+            <li><a href="Portafolio.html">Portafolio</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <img src="https://i.ibb.co/hgt1pn2/Logo.jpg"style="width:100px;height:100px;" alt="logo de la empresa"/>
+        <!-- Asegúrate de que la ruta al logo sea correcta -->
+        <h1>Noticias de Tecnología</h1>
+
+        <div class="news-article">
+            <h2>Innovaciones en la Inteligencia Artificial para 2024</h2>
+            <a href="https://www.infobae.com/tecno/2024/04/19/inteligencia-artificial-en-2024-avances-asombrosos-desafios-complejos-y-un-futuro-incierto/">Link Noticia</a>
+            <p>La inteligencia artificial sigue evolucionando rápidamente, con nuevos avances en el aprendizaje automático y la visión por computadora. Los expertos predicen que este año veremos mejoras significativas en la capacidad de los sistemas para realizar tareas complejas.</p>
+            
+        </div>
+
+        <div class="news-article">
+            <h2>La influencia de las nuevas tecnologías en la educación</h2>
+            <a href="https://www.sydle.com/es/blog/nuevas-tecnologias-en-la-educacion-63ef92977f03ed13ae2d1909">Link Noticia</a>
+            <p>Las nuevas tecnologías en la educación facilitan la personalización del aprendizaje, ya que existen herramientas para identificar las aptitudes y dificultades de cada alumno. Además, es posible desarrollar actividades más interesantes e interactivas.</p>
+            
+        </div>
+
+        <!-- Más artículos pueden ser añadidos aquí -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

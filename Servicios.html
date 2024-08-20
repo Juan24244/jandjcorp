@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Servicios</title>
+    <style>
+        :root {
+            --color-principal: #D8C598;
+            --color-secundario: #B08A28;
+            --color-terciario: #d8c598;
+            --color-neutro: #919191;
+            --color-texto: #0E231D;
+            --color-fondo: #F5F5F5;
+            --color-blanco: #FFFFFF;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #sidebar {
+            height: 100vh;
+            width: 250px;
+            background-color: var(--color-principal);
+            color: var(--color-texto);
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil */
+        }
+
+        #sidebar h3 {
+            color: var(--color-secundario);
+        }
+
+        #sidebar ul {
+            padding-left: 0;
+            list-style-type: none;
+        }
+
+        #sidebar li {
+            margin-bottom: 15px; /* Aumenta el espacio entre los elementos */
+        }
+
+        #sidebar a {
+            color: var(--color-texto);
+            text-decoration: none;
+            display: block; /* Hace que el enlace ocupe todo el ancho disponible */
+            padding: 10px; /* Añade espaciado interno para mejorar el área de clic */
+            border-radius: 4px; /* Redondea las esquinas del enlace */
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #sidebar a:hover {
+            background-color: var(--color-secundario); /* Cambia el fondo al pasar el mouse */
+            color: var(--color-blanco); /* Cambia el color del texto */
+            transform: scale(1.1); /* Aumenta el tamaño del enlace */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra más pronunciada */
+        }
+
+        header {
+            background-color: var(--color-principal);
+            padding: 10px 20px;
+            color: var(--color-blanco);
+            position: fixed;
+            width: calc(100% - 250px);
+            top: 0;
+            left: 250px;
+            z-index: 1000; /* Asegura que el encabezado esté por encima del contenido */
+        }
+
+        .navbar-brand img {
+            height: 50px;
+            float: right;
+        }
+
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            background-color: var(--color-fondo);
+            margin-top: 60px; /* Ajusta para el espacio del encabezado fijo */
+        }
+
+        footer {
+            background-color: var(--color-principal);
+            color: var(--color-texto);
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: calc(100% - 250px);
+            bottom: 0;
+            left: 250px;
+        }
+        h1{
+            color: #000;;
+        }
+    </style>
+    <!-- Incluye Bootstrap para estilos adicionales -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Encabezado con Logo -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="https://i.ibb.co/hgt1pn2/Logo.jpg"style="width:100px;height:100px;" alt="logo de la empresa"/>
+            </a>
+            <h1>Servicios</h1>
+        </nav>
+    </header>
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+        <h3>Barra Lateral</h3>
+        <ul class="list-unstyled">
+            <li><a href="Home.html">Inicio</a></li>
+            <li><a href="Nosotros.html">Nosotros</a></li>
+            <li><a href="Servicios.html">Servicios</a></li>
+            <li><a href="Producto.html">Productos</a></li>
+            <li><a href="Noticias.html">Noticias</a></li>
+            <li><a href="Contacto y soporte.html">Contacto y soporte</a></li>
+            <li><a href="FAQs.html">FAQs</a></li>
+            <li><a href="TYC.html">TyC</a></li>
+            <li><a href="Carreras.html">Carreras</a></li>
+            <li><a href="Portafolio.html">Portafolio</a></li>
+        </ul>
+    </div>
+
+    <!-- Contenido Principal -->
+    <main class="content">
+        <h1 class="text-center mb-4">Nuestros Servicios</h1>
+
+        <!-- Servicio 1 -->
+        <section class="mb-5">
+            <h2>Servicio 1: Desarrollo de Software a Medida</h2>
+            <p><strong>Descripción:</strong> Servicio especializado que se enfoca en el diseño, desarrollo e implementación de soluciones de software personalizadas, creadas a medida para satisfacer las necesidades específicas y los objetivos únicos de una empresa o proyecto, con el fin de optimizar sus operaciones, mejorar la eficiencia y apoyar el crecimiento estratégico.</p>
+            <ul>
+                <li><strong>Beneficios y características:</strong></li>
+                <li>Soluciones personalizadas para la empresa</li>
+                <li>Escalabilidad y flexibilidad</li>
+                <li>Soporte y mantenimiento continuo</li>
+            </ul>
+            <h4>Casos de Estudio:</h4>
+            <p>Implementamos un sistema de gestión para una empresa de logística que mejoró la eficiencia en un 30%. Consulta más detalles en nuestro <a href="#">portafolio de casos</a>.</p>
+            <h4>Precios:</h4>
+            <p>Los precios varían según los requisitos del proyecto. Contáctanos para una cotización personalizada.</p>
+        </section>
+
+        <!-- Servicio 2 -->
+        <section class="mb-5">
+            <h2>Servicio 2: Consultoría en Tecnología</h2>
+            <p><strong>Descripción:</strong>Servicio profesional que ofrece asesoramiento experto y estratégico en la selección, implementación y optimización de tecnologías, ayudando a las organizaciones a mejorar su eficiencia operativa, competitividad y adaptabilidad al cambio, al mismo tiempo que asegura la alineación con las mejores prácticas y tendencias del sector tecnológico.</p>
+            <ul>
+                <li><strong>Beneficios y características:</strong></li>
+                <li>Asesoría personalizada</li>
+                <li>Identificación de oportunidades tecnológicas</li>
+                <li>Planes de acción y recomendaciones detalladas</li>
+            </ul>
+            <h4>Casos de Estudio:</h4>
+            <p>Ayudamos a una startup a elegir y implementar una solución de CRM que aumentó su eficiencia operativa. Consulta el caso completo en nuestro <a href="#">portafolio de casos</a>.</p>
+            <h4>Precios:</h4>
+            <p>Las tarifas de consultoría se basan en el tiempo y la complejidad del servicio. Solicita una consulta inicial gratuita para obtener más información.</p>
+        </section>
+
+        <!-- FAQs -->
+        <section class="mb-5">
+            <h2>Preguntas Frecuentes (FAQs)</h2>
+            <div class="accordion" id="faqsAccordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                ¿Qué tipo de software desarrollan?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqsAccordion">
+                        <div class="card-body">
+                            Desarrollamos una amplia gama de software, incluyendo aplicaciones web, sistemas de gestión y herramientas a medida para distintos sectores.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                ¿Cómo solicito una cotización?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqsAccordion">
+                        <div class="card-body">
+                            Puedes solicitar una cotización completando nuestro formulario en la página de contacto o poniéndote en contacto con nosotros por correo electrónico.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                ¿Qué incluye el soporte post-venta?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqsAccordion">
+                        <div class="card-body">
+                            Nuestro soporte post-venta incluye asistencia técnica, actualizaciones y mantenimiento del software para asegurar su correcto funcionamiento.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
